@@ -58,13 +58,25 @@
         .footnote-ref:hover {
             text-decoration: underline;
         }
+        .gemini-btn {
+            background-color: #f0f9ff;
+            color: #0c4a6e;
+            border: 1px solid #bae6fd;
+            transition: all 0.2s ease-in-out;
+        }
+        .gemini-btn:hover {
+            background-color: #e0f2fe;
+            border-color: #7dd3fc;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
     <div class="flex">
         <!-- Sidebar Navigation -->
-        <aside id="sidebar" class="fixed top-0 left-0 h-screen w-64 bg-white shadow-lg p-6 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-30">
+        <aside id="sidebar" class="fixed top-0 left-0 h-screen w-64 bg-white shadow-lg p-6 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-30 overflow-y-auto">
             <h2 class="text-xl font-bold mb-6">Navegação</h2>
             <nav id="table-of-contents">
                 <ul class="space-y-2">
@@ -125,49 +137,75 @@
                     <h2>Parte I: Diagnóstico da Anatomia Jurídica do Risco</h2>
                     <p>A compreensão profunda dos riscos é a premissa indispensável para qualquer estratégia de reestruturação. Nesta seção, dissecaremos os conceitos jurídicos que definem a exposição patrimonial das empresas e de seus sócios no cenário em análise.</p>
                     
-                    <h4 id="secao1-1"><strong>Seção 1.1: O Grupo Econômico de Fato e a Teoria da Responsabilidade Solidária</strong></h4>
-                    <p>O maior e mais imediato perigo que ronda a coexistência de empresas interligadas por sócios em comum é a sua caracterização, pela autoridade fiscal ou por outros credores, como um <strong>"grupo econômico de fato"</strong>. Originário do Direito do Trabalho para proteger o crédito do empregado, este conceito foi progressivamente absorvido por outros ramos do direito, notadamente o Tributário, como ferramenta para combater a evasão fiscal.</p>
-                    <p>Um grupo econômico de fato existe quando, independentemente de uma formalização contratual (como uma holding), diversas pessoas jurídicas atuam no mercado sob uma direção unitária, com comunhão de interesses e uma coordenação de atividades que mascara suas autonomias formais. O principal efeito jurídico de tal caracterização é a imposição da <strong>responsabilidade solidária</strong>, pela qual a dívida de uma empresa pode ser exigida, em sua totalidade, de qualquer outra integrante do grupo.</p>
-                    <p>É crucial, no entanto, refutar a premissa simplista de que a mera identidade de sócios configura, automaticamente, um grupo econômico para fins de responsabilidade tributária. O Superior Tribunal de Justiça (STJ), em jurisprudência pacífica e reiterada, estabeleceu que a responsabilidade solidária entre empresas de um mesmo grupo econômico não é presumida. <a href="#nota1" class="footnote-ref">[1]</a> A autonomia patrimonial da pessoa jurídica é um princípio basilar do direito empresarial, e sua quebra é medida excepcional.</p>
-                    <p>O gatilho que autoriza a extensão da responsabilidade é a prova inequívoca do <strong>abuso da personalidade jurídica</strong>. Este abuso, no contexto de grupos empresariais, materializa-se por meio de duas condutas principais:</p>
-                    <ol class="list-decimal list-inside space-y-2">
-                        <li><strong>Confusão Patrimonial:</strong> Trata-se da mais flagrante evidência de um grupo de fato. Ocorre quando as fronteiras patrimoniais entre as empresas se dissolvem. Ativos, passivos, receitas e despesas são geridos de forma promíscua, tornando impossível para um observador externo discernir o que pertence a cada pessoa jurídica. A doutrina clássica de Fábio Konder Comparato refere-se a essa situação como uma "unidade de fato" que se sobrepõe à pluralidade de pessoas jurídicas formalmente existentes.</li>
-                        <li><strong>Desvio de Finalidade:</strong> Configura-se quando uma ou mais empresas do grupo são utilizadas para fins ilícitos ou para lesar terceiros, desviando-se de seu objeto social. O exemplo clássico é a criação de uma nova empresa ("laranja") para assumir as operações de outra que está sendo deliberadamente esvaziada para frustrar a cobrança de seus credores.</li>
-                    </ol>
-                    <p>O artigo 124, inciso I, do Código Tributário Nacional (CTN), que estabelece a responsabilidade solidária das pessoas que tenham "interesse comum na situação que constitua o fato gerador da obrigação principal", é interpretado pela jurisprudência do STJ não como um interesse meramente comercial, mas como um interesse jurídico qualificado pela fraude ou pelo abuso. <a href="#nota2" class="footnote-ref">[2]</a></p>
-                    <p>Portanto, a autoridade fiscal, ao auditar a Clínica A (endividada), buscará ativamente por indícios que comprovem essa confusão ou desvio. A identidade de sócios é apenas o fio condutor da investigação. A prova do abuso será buscada em: extratos bancários com pagamentos cruzados; funcionários registrados em uma empresa, mas prestando serviços habituais em outra sem um contrato de rateio de custos (<em>cost sharing agreement</em>); uso compartilhado de equipamentos e instalações sem contratos de locação ou comodato; e, principalmente, em qualquer ato que sugira a transferência de atividades e receitas da empresa devedora para a saudável.</p>
-                    <p>A conclusão inafastável é que o risco de contaminação não é uma consequência inevitável da estrutura societária, mas um produto direto da ausência de uma governança corporativa rigorosa que imponha uma segregação absoluta das operações, finanças e patrimônio de cada clínica.</p>
+                    <div class="flex justify-between items-center">
+                        <h4 id="secao1-1"><strong>Seção 1.1: O Grupo Econômico de Fato e a Teoria da Responsabilidade Solidária</strong></h4>
+                        <button class="gemini-btn text-xs font-semibold py-1 px-2 rounded-md flex items-center" data-prompt-context="secao1-1-content" data-prompt-title="Grupo Econômico de Fato">
+                            ✨ Simplificar
+                        </button>
+                    </div>
+                    <div id="secao1-1-content">
+                        <p>O maior e mais imediato perigo que ronda a coexistência de empresas interligadas por sócios em comum é a sua caracterização, pela autoridade fiscal ou por outros credores, como um <strong>"grupo econômico de fato"</strong>. Originário do Direito do Trabalho para proteger o crédito do empregado, este conceito foi progressivamente absorvido por outros ramos do direito, notadamente o Tributário, como ferramenta para combater a evasão fiscal.</p>
+                        <p>Um grupo econômico de fato existe quando, independentemente de uma formalização contratual (como uma holding), diversas pessoas jurídicas atuam no mercado sob uma direção unitária, com comunhão de interesses e uma coordenação de atividades que mascara suas autonomias formais. O principal efeito jurídico de tal caracterização é a imposição da <strong>responsabilidade solidária</strong>, pela qual a dívida de uma empresa pode ser exigida, em sua totalidade, de qualquer outra integrante do grupo.</p>
+                        <p>É crucial, no entanto, refutar a premissa simplista de que a mera identidade de sócios configura, automaticamente, um grupo econômico para fins de responsabilidade tributária. O Superior Tribunal de Justiça (STJ), em jurisprudência pacífica e reiterada, estabeleceu que a responsabilidade solidária entre empresas de um mesmo grupo econômico não é presumida. <a href="#nota1" class="footnote-ref">[1]</a> A autonomia patrimonial da pessoa jurídica é um princípio basilar do direito empresarial, e sua quebra é medida excepcional.</p>
+                        <p>O gatilho que autoriza a extensão da responsabilidade é a prova inequívoca do <strong>abuso da personalidade jurídica</strong>. Este abuso, no contexto de grupos empresariais, materializa-se por meio de duas condutas principais:</p>
+                        <ol class="list-decimal list-inside space-y-2">
+                            <li><strong>Confusão Patrimonial:</strong> Trata-se da mais flagrante evidência de um grupo de fato. Ocorre quando as fronteiras patrimoniais entre as empresas se dissolvem. Ativos, passivos, receitas e despesas são geridos de forma promíscua, tornando impossível para um observador externo discernir o que pertence a cada pessoa jurídica. A doutrina clássica de Fábio Konder Comparato refere-se a essa situação como uma "unidade de fato" que se sobrepõe à pluralidade de pessoas jurídicas formalmente existentes.</li>
+                            <li><strong>Desvio de Finalidade:</strong> Configura-se quando uma ou mais empresas do grupo são utilizadas para fins ilícitos ou para lesar terceiros, desviando-se de seu objeto social. O exemplo clássico é a criação de uma nova empresa ("laranja") para assumir as operações de outra que está sendo deliberadamente esvaziada para frustrar a cobrança de seus credores.</li>
+                        </ol>
+                        <p>O artigo 124, inciso I, do Código Tributário Nacional (CTN), que estabelece a responsabilidade solidária das pessoas que tenham "interesse comum na situação que constitua o fato gerador da obrigação principal", é interpretado pela jurisprudência do STJ não como um interesse meramente comercial, but como um interesse jurídico qualificado pela fraude ou pelo abuso. <a href="#nota2" class="footnote-ref">[2]</a></p>
+                        <p>Portanto, a autoridade fiscal, ao auditar a Clínica A (endividada), buscará ativamente por indícios que comprovem essa confusão ou desvio. A identidade de sócios é apenas o fio condutor da investigação. A prova do abuso será buscada em: extratos bancários com pagamentos cruzados; funcionários registrados em uma empresa, mas prestando serviços habituais em outra sem um contrato de rateio de custos (<em>cost sharing agreement</em>); uso compartilhado de equipamentos e instalações sem contratos de locação ou comodato; e, principalmente, em qualquer ato que sugira a transferência de atividades e receitas da empresa devedora para a saudável.</p>
+                        <p>A conclusão inafastável é que o risco de contaminação não é uma consequência inevitável da estrutura societária, mas um produto direto da ausência de uma governança corporativa rigorosa que imponha uma segregação absoluta das operações, finanças e patrimônio de cada clínica.</p>
+                    </div>
 
-                    <h4 id="secao1-2"><strong>Seção 1.2: A Desconsideração da Personalidade Jurídica e a Ameaça ao Patrimônio Pessoal</strong></h4>
-                    <p>Se a teoria do grupo econômico ameaça o patrimônio das empresas saudáveis, a <strong>Desconsideração da Personalidade Jurídica (DPJ)</strong> representa a ameaça direta ao patrimônio pessoal dos sócios. Este instituto, previsto no artigo 50 do Código Civil, permite que o juiz ignore temporariamente a autonomia patrimonial da empresa para que os bens particulares dos sócios respondam por obrigações da sociedade.</p>
-                    <p>É fundamental distinguir as duas teorias que regem a DPJ no direito brasileiro:</p>
-                    <ul class="list-disc list-inside space-y-2">
-                        <li><strong>Teoria Menor:</strong> Aplicada em subsistemas específicos como o Direito do Consumidor (Art. 28, § 5º, CDC) e o Direito Ambiental (Art. 4º, Lei 9.605/98), esta teoria é mais branda. Para sua aplicação, basta a prova de que a personalidade jurídica é, de alguma forma, um obstáculo ao ressarcimento de prejuízos. O mero inadimplemento da empresa já pode ser suficiente.</li>
-                        <li><strong>Teoria Maior:</strong> É a teoria adotada pelo Código Civil para as relações cíveis e empresariais em geral. É muito mais restritiva e protetiva da autonomia da pessoa jurídica. Para sua aplicação, não basta o inadimplemento; é necessária a prova do <strong>abuso da personalidade</strong>, caracterizado, novamente, pelo <strong>desvio de finalidade</strong> ou pela <strong>confusão patrimonial</strong>. O STJ consolidou a aplicação da Teoria Maior como regra geral. <a href="#nota3" class="footnote-ref">[3]</a></li>
-                    </ul>
-                    <p>No cenário das clínicas, a DPJ pode se manifestar de duas formas:</p>
-                    <ol class="list-decimal list-inside space-y-2">
-                        <li><strong>Desconsideração Direta:</strong> É a hipótese clássica. Um credor da Clínica A, diante da insuficiência de bens desta para saldar a dívida, pode requerer a desconsideração para atingir o patrimônio dos sócios. O pedido será acolhido se o credor provar que os sócios-administradores agiram com excesso de poder, infringiram a lei (a sonegação fiscal dolosa é um exemplo), violaram o contrato social ou promoveram a dissolução irregular da empresa — o ato de "baixar as portas" sem seguir os procedimentos formais de liquidação, o que gera a presunção de fraude. <a href="#nota4" class="footnote-ref">[4]</a></li>
-                        <li><strong>Desconsideração Inversa:</strong> Esta é uma construção jurisprudencial de extrema relevância para o caso. Ocorre quando o caminho da fraude é o inverso: o sócio devedor utiliza o patrimônio de uma empresa (a Clínica B, saudável) para ocultar seus próprios bens ou para receber valores que deveriam ser seus, frustrando a cobrança de seus credores pessoais ou dos credores da outra empresa (Clínica A). Neste caso, o juiz desconsidera a personalidade da empresa "escudo" (Clínica B) para que seus bens respondam pela dívida do sócio ou da empresa coligada. <a href="#nota5" class="footnote-ref">[5]</a></li>
-                    </ol>
-                    <p>A ameaça da Desconsideração Inversa é o que torna a ideia de "ajudar" a Clínica A com recursos da Clínica B tão perigosa. Um simples pagamento de uma conta ou uma transferência de contrato sem a devida contraprestação formal e a valor de mercado não é um auxílio, mas a produção da prova material da confusão patrimonial que legitima a extensão da dívida. A proteção da empresa saudável reside em seu isolamento absoluto e na formalidade impecável de todas as suas transações.</p>
-                    <p>O Código de Processo Civil de 2015, em seus artigos 133 a 137, instituiu um procedimento próprio para a DPJ, o <strong>Incidente de Desconsideração da Personalidade Jurídica (IDPJ)</strong>, que garante o contraditório e a ampla defesa ao sócio antes que seus bens sejam atingidos, o que representa um avanço processual significativo.</p>
+                    <div class="flex justify-between items-center mt-6">
+                        <h4 id="secao1-2"><strong>Seção 1.2: A Desconsideração da Personalidade Jurídica e a Ameaça ao Patrimônio Pessoal</strong></h4>
+                        <button class="gemini-btn text-xs font-semibold py-1 px-2 rounded-md flex items-center" data-prompt-context="secao1-2-content" data-prompt-title="Desconsideração da Personalidade Jurídica">
+                            ✨ Simplificar
+                        </button>
+                    </div>
+                    <div id="secao1-2-content">
+                        <p>Se a teoria do grupo econômico ameaça o patrimônio das empresas saudáveis, a <strong>Desconsideração da Personalidade Jurídica (DPJ)</strong> representa a ameaça direta ao patrimônio pessoal dos sócios. Este instituto, previsto no artigo 50 do Código Civil, permite que o juiz ignore temporariamente a autonomia patrimonial da empresa para que os bens particulares dos sócios respondam por obrigações da sociedade.</p>
+                        <p>É fundamental distinguir as duas teorias que regem a DPJ no direito brasileiro:</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Teoria Menor:</strong> Aplicada em subsistemas específicos como o Direito do Consumidor (Art. 28, § 5º, CDC) e o Direito Ambiental (Art. 4º, Lei 9.605/98), esta teoria é mais branda. Para sua aplicação, basta a prova de que a personalidade jurídica é, de alguma forma, um obstáculo ao ressarcimento de prejuízos. O mero inadimplemento da empresa já pode ser suficiente.</li>
+                            <li><strong>Teoria Maior:</strong> É a teoria adotada pelo Código Civil para as relações cíveis e empresariais em geral. É muito mais restritiva e protetiva da autonomia da pessoa jurídica. Para sua aplicação, não basta o inadimplemento; é necessária a prova do <strong>abuso da personalidade</strong>, caracterizado, novamente, pelo <strong>desvio de finalidade</strong> ou pela <strong>confusão patrimonial</strong>. O STJ consolidou a aplicação da Teoria Maior como regra geral. <a href="#nota3" class="footnote-ref">[3]</a></li>
+                        </ul>
+                        <p>No cenário das clínicas, a DPJ pode se manifestar de duas formas:</p>
+                        <ol class="list-decimal list-inside space-y-2">
+                            <li><strong>Desconsideração Direta:</strong> É a hipótese clássica. Um credor da Clínica A, diante da insuficiência de bens desta para saldar a dívida, pode requerer a desconsideração para atingir o patrimônio dos sócios. O pedido será acolhido se o credor provar que os sócios-administradores agiram com excesso de poder, infringiram a lei (a sonegação fiscal dolosa é um exemplo), violaram o contrato social ou promoveram a dissolução irregular da empresa — o ato de "baixar as portas" sem seguir os procedimentos formais de liquidação, o que gera a presunção de fraude. <a href="#nota4" class="footnote-ref">[4]</a></li>
+                            <li><strong>Desconsideração Inversa:</strong> Esta é uma construção jurisprudencial de extrema relevância para o caso. Ocorre quando o caminho da fraude é o inverso: o sócio devedor utiliza o patrimônio de uma empresa (a Clínica B, saudável) para ocultar seus próprios bens ou para receber valores que deveriam ser seus, frustrando a cobrança de seus credores pessoais ou dos credores da outra empresa (Clínica A). Neste caso, o juiz desconsidera a personalidade da empresa "escudo" (Clínica B) para que seus bens respondam pela dívida do sócio ou da empresa coligada. <a href="#nota5" class="footnote-ref">[5]</a></li>
+                        </ol>
+                        <p>A ameaça da Desconsideração Inversa é o que torna a ideia de "ajudar" a Clínica A com recursos da Clínica B tão perigosa. Um simples pagamento de uma conta ou uma transferência de contrato sem a devida contraprestação formal e a valor de mercado não é um auxílio, mas a produção da prova material da confusão patrimonial que legitima a extensão da dívida. A proteção da empresa saudável reside em seu isolamento absoluto e na formalidade impecável de todas as suas transações.</p>
+                        <p>O Código de Processo Civil de 2015, em seus artigos 133 a 137, instituiu um procedimento próprio para a DPJ, o <strong>Incidente de Desconsideração da Personalidade Jurídica (IDPJ)</strong>, que garante o contraditório e a ampla defesa ao sócio antes que seus bens sejam atingidos, o que representa um avanço processual significativo.</p>
+                    </div>
                 </section>
 
                 <section id="parte2">
                     <h2>Parte II: Análise Comparativa das Vias Estratégicas de Reestruturação</h2>
                     <p>Mapeada a topografia dos riscos, a análise se volta para os caminhos possíveis. Essencialmente, duas rotas se apresentam: uma, a Recuperação Judicial, é uma via legal, estruturada e supervisionada; a outra, a reorganização por transferência de ativos, é um atalho que se revela um abismo.</p>
 
-                    <h4 id="secao2-1"><strong>Seção 2.1: A Recuperação Judicial como Instrumento de Saneamento Empresarial</strong></h4>
-                    <p>A percepção leiga frequentemente confunde Recuperação Judicial com falência. Trata-se de um equívoco fundamental. A RJ, disciplinada pela Lei nº 11.101/2005, é um microssistema jurídico concebido para ser o antídoto da falência. Seu objetivo precípuo, consagrado no artigo 47, é viabilizar a superação da situação de crise econômico-financeira do devedor, a fim de permitir a <strong>manutenção da fonte produtora, do emprego dos trabalhadores e dos interesses dos credores</strong>, promovendo, assim, a <strong>preservação da empresa</strong>, por sua função social e pelo estímulo à atividade econômica.</p>
-                    <p>Para a Clínica A, a RJ oferece um arsenal de vantagens estratégicas:</p>
-                    <ul class="list-disc list-inside space-y-2">
-                        <li><strong>Suspensão de Execuções (<em>Stay Period</em>):</strong> O deferimento do processamento da RJ instaura o chamado <em>stay period</em>, um período de, no mínimo, 180 dias (prorrogáveis uma única vez), durante o qual todas as ações e execuções por dívidas sujeitas à recuperação são suspensas (Art. 6º). As execuções fiscais não são suspensas, mas o juízo da RJ se torna competente para deliberar sobre atos de constrição patrimonial, evitando que penhoras inviabilizem a operação. Este "escudo" legal é vital para que a empresa possa respirar e reorganizar seu caixa.</li>
-                        <li><strong>Negociação Coletiva e Vinculante:</strong> A RJ cria um ambiente de negociação coletiva e forçada. Todos os credores são organizados em classes (trabalhista, com garantia real, quirografários e PME) e deliberam sobre um Plano de Recuperação Judicial (PRJ) em uma Assembleia Geral de Credores (AGC). A aprovação do plano, pelos quóruns legais, vincula a totalidade dos credores, mesmo os dissidentes e os ausentes, impondo novas condições de pagamento (deságio, carência, parcelamento).</li>
-                        <li><strong>Manutenção de Contratos Essenciais:</strong> A lei e a jurisprudência do STJ são enfáticas em proteger a continuidade dos contratos essenciais à atividade da empresa, incluindo os contratos administrativos com o Poder Público. Rescindir o contrato com o SUS seria uma medida contraproducente ao próprio espírito da lei, que é o de manter a empresa gerando receita para se reerguer. <a href="#nota6" class="footnote-ref">[6]</a></li>
-                        <li><strong>Alienação de Ativos sem Sucessão (<em>Free and Clear</em>):</strong> A lei prevê a possibilidade de venda de filiais ou Unidades Produtivas Isoladas (UPIs) com uma vantagem extraordinária: o arrematante não sucede o devedor em nenhuma de suas obrigações, sejam elas tributárias, trabalhistas ou cíveis (Art. 60, parágrafo único, e Art. 141, II). Esta é uma poderosa ferramenta de reestruturação, permitindo a venda de parte da operação para gerar caixa de forma "limpa".</li>
-                    </ul>
-                    <p>A estratégia correta, portanto, é o pedido de Recuperação Judicial <strong>exclusivamente pela Clínica A</strong>. Isso confina o processo e seus efeitos à pessoa jurídica que efetivamente gerou o passivo, utilizando o arcabouço legal da RJ para tratar a doença sem contaminar os organismos sadios do grupo.</p>
+                    <div class="flex justify-between items-center">
+                        <h4 id="secao2-1"><strong>Seção 2.1: A Recuperação Judicial como Instrumento de Saneamento Empresarial</strong></h4>
+                         <button class="gemini-btn text-xs font-semibold py-1 px-2 rounded-md flex items-center" data-prompt-context="secao2-1-content" data-prompt-title="Recuperação Judicial">
+                            ✨ Simplificar
+                        </button>
+                    </div>
+                    <div id="secao2-1-content">
+                        <p>A percepção leiga frequentemente confunde Recuperação Judicial com falência. Trata-se de um equívoco fundamental. A RJ, disciplinada pela Lei nº 11.101/2005, é um microssistema jurídico concebido para ser o antídoto da falência. Seu objetivo precípuo, consagrado no artigo 47, é viabilizar a superação da situação de crise econômico-financeira do devedor, a fim de permitir a <strong>manutenção da fonte produtora, do emprego dos trabalhadores e dos interesses dos credores</strong>, promovendo, assim, a <strong>preservação da empresa</strong>, por sua função social e pelo estímulo à atividade econômica.</p>
+                        <p>Para a Clínica A, a RJ oferece um arsenal de vantagens estratégicas:</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Suspensão de Execuções (<em>Stay Period</em>):</strong> O deferimento do processamento da RJ instaura o chamado <em>stay period</em>, um período de, no mínimo, 180 dias (prorrogáveis uma única vez), durante o qual todas as ações e execuções por dívidas sujeitas à recuperação são suspensas (Art. 6º). As execuções fiscais não são suspensas, mas o juízo da RJ se torna competente para deliberar sobre atos de constrição patrimonial, evitando que penhoras inviabilizem a operação. Este "escudo" legal é vital para que a empresa possa respirar e reorganizar seu caixa.</li>
+                            <li><strong>Negociação Coletiva e Vinculante:</strong> A RJ cria um ambiente de negociação coletiva e forçada. Todos os credores são organizados em classes (trabalhista, com garantia real, quirografários e PME) e deliberam sobre um Plano de Recuperação Judicial (PRJ) em uma Assembleia Geral de Credores (AGC). A aprovação do plano, pelos quóruns legais, vincula a totalidade dos credores, mesmo os dissidentes e os ausentes, impondo novas condições de pagamento (deságio, carência, parcelamento).</li>
+                            <li><strong>Manutenção de Contratos Essenciais:</strong> A lei e a jurisprudência do STJ são enfáticas em proteger a continuidade dos contratos essenciais à atividade da empresa, incluindo os contratos administrativos com o Poder Público. Rescindir o contrato com o SUS seria uma medida contraproducente ao próprio espírito da lei, que é o de manter a empresa gerando receita para se reerguer. <a href="#nota6" class="footnote-ref">[6]</a></li>
+                            <li><strong>Alienação de Ativos sem Sucessão (<em>Free and Clear</em>):</strong> A lei prevê a possibilidade de venda de filiais ou Unidades Produtivas Isoladas (UPIs) com uma vantagem extraordinária: o arrematante não sucede o devedor em nenhuma de suas obrigações, sejam elas tributárias, trabalhistas ou cíveis (Art. 60, parágrafo único, e Art. 141, II). Esta é uma poderosa ferramenta de reestruturação, permitindo a venda de parte da operação para gerar caixa de forma "limpa".</li>
+                        </ul>
+                        <p>A estratégia correta, portanto, é o pedido de Recuperação Judicial <strong>exclusivamente pela Clínica A</strong>. Isso confina o processo e seus efeitos à pessoa jurídica que efetivamente gerou o passivo, utilizando o arcabouço legal da RJ para tratar a doença sem contaminar os organismos sadios do grupo.</p>
+                    </div>
+                     <div class="mt-8 text-center">
+                        <button id="checklist-btn" class="gemini-btn font-bold py-2 px-4 rounded-lg inline-flex items-center shadow-md">
+                            ✨ Gerar Checklist Prático da Recuperação Judicial
+                        </button>
+                    </div>
 
                     <h4 id="secao2-2"><strong>Seção 2.2: A Reorganização Societária por Transferência de Ativos e a Sucessão Empresarial</strong></h4>
                     <p>A alternativa que se apresenta como mais simples e rápida — transferir os contratos e ativos da Clínica A para a Clínica B e "abandonar" a primeira — é, na verdade, uma armadilha jurídica. Tal ato configura, de forma inequívoca, uma <strong>sucessão empresarial</strong>, também conhecida na doutrina como <strong>trespasse</strong> (a alienação do estabelecimento empresarial). As consequências são automáticas e severas.</p>
@@ -229,13 +267,29 @@
     <!-- Modal for Footnotes -->
     <div id="footnote-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4">
         <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full p-6 relative">
-            <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+            <button id="close-footnote-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <h3 id="modal-title" class="modal-title text-lg font-bold mb-4"></h3>
-            <div id="modal-content" class="text-base"></div>
+            <h3 id="footnote-modal-title" class="modal-title text-lg font-bold mb-4"></h3>
+            <div id="footnote-modal-content" class="text-base"></div>
+        </div>
+    </div>
+    
+    <!-- Modal for Gemini API -->
+    <div id="gemini-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full p-6 relative">
+             <button id="close-gemini-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <h3 id="gemini-modal-title" class="modal-title text-lg font-bold mb-4 flex items-center"></h3>
+            <div id="gemini-modal-content" class="text-base max-h-[60vh] overflow-y-auto">
+                <!-- Loading Spinner -->
+                <div id="gemini-loading" class="flex justify-center items-center h-48">
+                    <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600"></div>
+                </div>
+                <!-- Content will be injected here -->
+                <div id="gemini-text-content" class="prose-custom"></div>
+            </div>
         </div>
     </div>
 
@@ -245,12 +299,13 @@
             const sidebar = document.getElementById('sidebar');
             const mainContent = document.querySelector('main');
 
-            menuToggle.addEventListener('click', () => {
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
                 sidebar.classList.toggle('-translate-x-full');
             });
             
             mainContent.addEventListener('click', () => {
-                if (!sidebar.classList.contains('-translate-x-full')) {
+                if (window.innerWidth < 768 && !sidebar.classList.contains('-translate-x-full')) {
                     sidebar.classList.add('-translate-x-full');
                 }
             });
@@ -258,13 +313,24 @@
             // Active link highlighting on scroll
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('#table-of-contents a');
+            
+            const navLinksInSidebar = document.querySelectorAll('#sidebar a');
+            navLinksInSidebar.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 768) {
+                        sidebar.classList.add('-translate-x-full');
+                    }
+                });
+            });
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
+                        const targetId = entry.target.id;
                         navLinks.forEach(link => {
                             link.classList.remove('active');
-                            if (link.getAttribute('href').substring(1) === entry.target.id || link.getAttribute('href').substring(1) === entry.target.parentElement.id) {
+                            const linkHref = link.getAttribute('href').substring(1);
+                            if (linkHref === targetId || linkHref === entry.target.parentElement.id) {
                                 link.classList.add('active');
                             }
                         });
@@ -278,11 +344,11 @@
                 subsections.forEach(sub => observer.observe(sub));
             });
             
-            // Modal Logic
-            const modal = document.getElementById('footnote-modal');
-            const closeModalBtn = document.getElementById('close-modal');
-            const modalTitle = document.getElementById('modal-title');
-            const modalContent = document.getElementById('modal-content');
+            // Footnote Modal Logic
+            const footnoteModal = document.getElementById('footnote-modal');
+            const closeFootnoteModalBtn = document.getElementById('close-footnote-modal');
+            const footnoteModalTitle = document.getElementById('footnote-modal-title');
+            const footnoteModalContent = document.getElementById('footnote-modal-content');
 
             document.querySelectorAll('.footnote-ref').forEach(ref => {
                 ref.addEventListener('click', (e) => {
@@ -290,24 +356,106 @@
                     const noteId = ref.getAttribute('href').substring(1);
                     const noteElement = document.getElementById(noteId);
                     if (noteElement) {
-                        modalTitle.textContent = `Referência Jurídica ${ref.textContent}`;
-                        modalContent.innerHTML = noteElement.innerHTML;
-                        modal.classList.remove('hidden');
-                        modal.classList.add('flex');
+                        footnoteModalTitle.textContent = `Referência Jurídica ${ref.textContent}`;
+                        footnoteModalContent.innerHTML = noteElement.innerHTML;
+                        footnoteModal.classList.remove('hidden');
+                        footnoteModal.classList.add('flex');
+                    }
+                });
+            });
+            
+            const closeFootnoteModal = () => {
+                footnoteModal.classList.add('hidden');
+                footnoteModal.classList.remove('flex');
+            };
+            closeFootnoteModalBtn.addEventListener('click', closeFootnoteModal);
+            footnoteModal.addEventListener('click', (e) => e.target === footnoteModal && closeFootnoteModal());
+
+            // Gemini API Modal Logic
+            const geminiModal = document.getElementById('gemini-modal');
+            const closeGeminiModalBtn = document.getElementById('close-gemini-modal');
+            const geminiModalTitle = document.getElementById('gemini-modal-title');
+            const geminiModalContent = document.getElementById('gemini-modal-content');
+            const geminiLoading = document.getElementById('gemini-loading');
+            const geminiTextContent = document.getElementById('gemini-text-content');
+            
+            const openGeminiModal = (title) => {
+                geminiModalTitle.innerHTML = `✨ ${title}`;
+                geminiTextContent.innerHTML = '';
+                geminiLoading.style.display = 'flex';
+                geminiModal.classList.remove('hidden');
+                geminiModal.classList.add('flex');
+            };
+
+            const closeGeminiModal = () => {
+                geminiModal.classList.add('hidden');
+                geminiModal.classList.remove('flex');
+            };
+            
+            closeGeminiModalBtn.addEventListener('click', closeGeminiModal);
+            geminiModal.addEventListener('click', (e) => e.target === geminiModal && closeGeminiModal());
+
+            async function callGeminiAPI(prompt) {
+                const apiKey = ""; 
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+                
+                let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+                const payload = { contents: chatHistory };
+
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`API Error: ${response.statusText}`);
+                    }
+
+                    const result = await response.json();
+                    
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        return result.candidates[0].content.parts[0].text;
+                    } else {
+                        console.error("Resposta da API em formato inesperado:", result);
+                        return "Não foi possível obter uma resposta. Tente novamente.";
+                    }
+                } catch (error) {
+                    console.error("Erro ao chamar a API Gemini:", error);
+                    return `Ocorreu um erro ao processar sua solicitação: ${error.message}`;
+                }
+            }
+
+            document.querySelectorAll('.gemini-btn').forEach(button => {
+                button.addEventListener('click', async () => {
+                    const contextId = button.dataset.promptContext;
+                    const title = button.dataset.promptTitle;
+                    const contextElement = document.getElementById(contextId);
+
+                    if (contextElement) {
+                        const contextText = contextElement.innerText;
+                        const prompt = `Com base no seguinte texto jurídico extraído de um livro sobre direito empresarial para o setor da saúde: "${contextText}". Por favor, explique o conceito principal de "${title}" em termos muito simples e diretos, usando analogias do dia a dia. O público-alvo é um empresário brasileiro sem formação em direito. Responda em português do Brasil. Formate a resposta com parágrafos curtos e, se apropriado, uma lista de pontos chave.`;
+                        
+                        openGeminiModal(`Simplificando: ${title}`);
+                        const resultText = await callGeminiAPI(prompt);
+                        geminiLoading.style.display = 'none';
+                        geminiTextContent.innerHTML = resultText.replace(/\n/g, '<br>');
                     }
                 });
             });
 
-            const closeModal = () => {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-            };
+            document.getElementById('checklist-btn').addEventListener('click', async () => {
+                const contextElement = document.getElementById('secao2-1-content');
+                const contextText = contextElement.innerText;
+                const prompt = `Com base no seguinte texto que descreve a Recuperação Judicial (RJ) no Brasil: "${contextText}". Crie um checklist prático e acionável, em formato de lista, para um empresário do setor da saúde que está considerando iniciar um processo de RJ. O checklist deve ser dividido em fases (ex: Preparação, Ajuizamento, Pós-Aprovação) e usar uma linguagem clara e direta. Responda em português do Brasil.`;
 
-            closeModalBtn.addEventListener('click', closeModal);
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    closeModal();
-                }
+                openGeminiModal('Checklist Prático para Recuperação Judicial');
+                const resultText = await callGeminiAPI(prompt);
+                geminiLoading.style.display = 'none';
+                geminiTextContent.innerHTML = resultText.replace(/\n/g, '<br>');
             });
         });
     </script>
