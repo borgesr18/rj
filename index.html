@@ -58,18 +58,6 @@
         .footnote-ref:hover {
             text-decoration: underline;
         }
-        .gemini-btn {
-            background-color: #f0f9ff;
-            color: #0c4a6e;
-            border: 1px solid #bae6fd;
-            transition: all 0.2s ease-in-out;
-        }
-        .gemini-btn:hover {
-            background-color: #e0f2fe;
-            border-color: #7dd3fc;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -139,9 +127,6 @@
                     
                     <div class="flex justify-between items-center">
                         <h4 id="secao1-1"><strong>Seção 1.1: O Grupo Econômico de Fato e a Teoria da Responsabilidade Solidária</strong></h4>
-                        <button class="gemini-btn text-xs font-semibold py-1 px-2 rounded-md flex items-center" data-prompt-context="secao1-1-content" data-prompt-title="Grupo Econômico de Fato">
-                            ✨ Simplificar
-                        </button>
                     </div>
                     <div id="secao1-1-content">
                         <p>O maior e mais imediato perigo que ronda a coexistência de empresas interligadas por sócios em comum é a sua caracterização, pela autoridade fiscal ou por outros credores, como um <strong>"grupo econômico de fato"</strong>. Originário do Direito do Trabalho para proteger o crédito do empregado, este conceito foi progressivamente absorvido por outros ramos do direito, notadamente o Tributário, como ferramenta para combater a evasão fiscal.</p>
@@ -159,9 +144,6 @@
 
                     <div class="flex justify-between items-center mt-6">
                         <h4 id="secao1-2"><strong>Seção 1.2: A Desconsideração da Personalidade Jurídica e a Ameaça ao Patrimônio Pessoal</strong></h4>
-                        <button class="gemini-btn text-xs font-semibold py-1 px-2 rounded-md flex items-center" data-prompt-context="secao1-2-content" data-prompt-title="Desconsideração da Personalidade Jurídica">
-                            ✨ Simplificar
-                        </button>
                     </div>
                     <div id="secao1-2-content">
                         <p>Se a teoria do grupo econômico ameaça o patrimônio das empresas saudáveis, a <strong>Desconsideração da Personalidade Jurídica (DPJ)</strong> representa a ameaça direta ao patrimônio pessoal dos sócios. Este instituto, previsto no artigo 50 do Código Civil, permite que o juiz ignore temporariamente a autonomia patrimonial da empresa para que os bens particulares dos sócios respondam por obrigações da sociedade.</p>
@@ -186,9 +168,6 @@
 
                     <div class="flex justify-between items-center">
                         <h4 id="secao2-1"><strong>Seção 2.1: A Recuperação Judicial como Instrumento de Saneamento Empresarial</strong></h4>
-                         <button class="gemini-btn text-xs font-semibold py-1 px-2 rounded-md flex items-center" data-prompt-context="secao2-1-content" data-prompt-title="Recuperação Judicial">
-                            ✨ Simplificar
-                        </button>
                     </div>
                     <div id="secao2-1-content">
                         <p>A percepção leiga frequentemente confunde Recuperação Judicial com falência. Trata-se de um equívoco fundamental. A RJ, disciplinada pela Lei nº 11.101/2005, é um microssistema jurídico concebido para ser o antídoto da falência. Seu objetivo precípuo, consagrado no artigo 47, é viabilizar a superação da situação de crise econômico-financeira do devedor, a fim de permitir a <strong>manutenção da fonte produtora, do emprego dos trabalhadores e dos interesses dos credores</strong>, promovendo, assim, a <strong>preservação da empresa</strong>, por sua função social e pelo estímulo à atividade econômica.</p>
@@ -200,11 +179,6 @@
                             <li><strong>Alienação de Ativos sem Sucessão (<em>Free and Clear</em>):</strong> A lei prevê a possibilidade de venda de filiais ou Unidades Produtivas Isoladas (UPIs) com uma vantagem extraordinária: o arrematante não sucede o devedor em nenhuma de suas obrigações, sejam elas tributárias, trabalhistas ou cíveis (Art. 60, parágrafo único, e Art. 141, II). Esta é uma poderosa ferramenta de reestruturação, permitindo a venda de parte da operação para gerar caixa de forma "limpa".</li>
                         </ul>
                         <p>A estratégia correta, portanto, é o pedido de Recuperação Judicial <strong>exclusivamente pela Clínica A</strong>. Isso confina o processo e seus efeitos à pessoa jurídica que efetivamente gerou o passivo, utilizando o arcabouço legal da RJ para tratar a doença sem contaminar os organismos sadios do grupo.</p>
-                    </div>
-                     <div class="mt-8 text-center">
-                        <button id="checklist-btn" class="gemini-btn font-bold py-2 px-4 rounded-lg inline-flex items-center shadow-md">
-                            ✨ Gerar Checklist Prático da Recuperação Judicial
-                        </button>
                     </div>
 
                     <h4 id="secao2-2"><strong>Seção 2.2: A Reorganização Societária por Transferência de Ativos e a Sucessão Empresarial</strong></h4>
@@ -275,24 +249,6 @@
         </div>
     </div>
     
-    <!-- Modal for Gemini API -->
-    <div id="gemini-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4">
-        <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full p-6 relative">
-             <button id="close-gemini-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-            </button>
-            <h3 id="gemini-modal-title" class="modal-title text-lg font-bold mb-4 flex items-center"></h3>
-            <div id="gemini-modal-content" class="text-base max-h-[60vh] overflow-y-auto">
-                <!-- Loading Spinner -->
-                <div id="gemini-loading" class="flex justify-center items-center h-48">
-                    <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600"></div>
-                </div>
-                <!-- Content will be injected here -->
-                <div id="gemini-text-content" class="prose-custom"></div>
-            </div>
-        </div>
-    </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const menuToggle = document.getElementById('menu-toggle');
@@ -370,93 +326,6 @@
             };
             closeFootnoteModalBtn.addEventListener('click', closeFootnoteModal);
             footnoteModal.addEventListener('click', (e) => e.target === footnoteModal && closeFootnoteModal());
-
-            // Gemini API Modal Logic
-            const geminiModal = document.getElementById('gemini-modal');
-            const closeGeminiModalBtn = document.getElementById('close-gemini-modal');
-            const geminiModalTitle = document.getElementById('gemini-modal-title');
-            const geminiModalContent = document.getElementById('gemini-modal-content');
-            const geminiLoading = document.getElementById('gemini-loading');
-            const geminiTextContent = document.getElementById('gemini-text-content');
-            
-            const openGeminiModal = (title) => {
-                geminiModalTitle.innerHTML = `✨ ${title}`;
-                geminiTextContent.innerHTML = '';
-                geminiLoading.style.display = 'flex';
-                geminiModal.classList.remove('hidden');
-                geminiModal.classList.add('flex');
-            };
-
-            const closeGeminiModal = () => {
-                geminiModal.classList.add('hidden');
-                geminiModal.classList.remove('flex');
-            };
-            
-            closeGeminiModalBtn.addEventListener('click', closeGeminiModal);
-            geminiModal.addEventListener('click', (e) => e.target === geminiModal && closeGeminiModal());
-
-            async function callGeminiAPI(prompt) {
-                const apiKey = ""; 
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-                
-                let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
-                const payload = { contents: chatHistory };
-
-                try {
-                    const response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    if (!response.ok) {
-                        throw new Error(`API Error: ${response.statusText}`);
-                    }
-
-                    const result = await response.json();
-                    
-                    if (result.candidates && result.candidates.length > 0 &&
-                        result.candidates[0].content && result.candidates[0].content.parts &&
-                        result.candidates[0].content.parts.length > 0) {
-                        return result.candidates[0].content.parts[0].text;
-                    } else {
-                        console.error("Resposta da API em formato inesperado:", result);
-                        return "Não foi possível obter uma resposta. Tente novamente.";
-                    }
-                } catch (error) {
-                    console.error("Erro ao chamar a API Gemini:", error);
-                    return `Ocorreu um erro ao processar sua solicitação: ${error.message}`;
-                }
-            }
-
-            document.querySelectorAll('.gemini-btn').forEach(button => {
-                button.addEventListener('click', async () => {
-                    const contextId = button.dataset.promptContext;
-                    const title = button.dataset.promptTitle;
-                    const contextElement = document.getElementById(contextId);
-
-                    if (contextElement) {
-                        const contextText = contextElement.innerText;
-                        const prompt = `Com base no seguinte texto jurídico extraído de um livro sobre direito empresarial para o setor da saúde: "${contextText}". Por favor, explique o conceito principal de "${title}" em termos muito simples e diretos, usando analogias do dia a dia. O público-alvo é um empresário brasileiro sem formação em direito. Responda em português do Brasil. Formate a resposta com parágrafos curtos e, se apropriado, uma lista de pontos chave.`;
-                        
-                        openGeminiModal(`Simplificando: ${title}`);
-                        const resultText = await callGeminiAPI(prompt);
-                        geminiLoading.style.display = 'none';
-                        geminiTextContent.innerHTML = resultText.replace(/\n/g, '<br>');
-                    }
-                });
-            });
-
-            document.getElementById('checklist-btn').addEventListener('click', async () => {
-                const contextElement = document.getElementById('secao2-1-content');
-                const contextText = contextElement.innerText;
-                const prompt = `Com base no seguinte texto que descreve a Recuperação Judicial (RJ) no Brasil: "${contextText}". Crie um checklist prático e acionável, em formato de lista, para um empresário do setor da saúde que está considerando iniciar um processo de RJ. O checklist deve ser dividido em fases (ex: Preparação, Ajuizamento, Pós-Aprovação) e usar uma linguagem clara e direta. Responda em português do Brasil.`;
-
-                openGeminiModal('Checklist Prático para Recuperação Judicial');
-                const resultText = await callGeminiAPI(prompt);
-                geminiLoading.style.display = 'none';
-                geminiTextContent.innerHTML = resultText.replace(/\n/g, '<br>');
-            });
         });
     </script>
 
